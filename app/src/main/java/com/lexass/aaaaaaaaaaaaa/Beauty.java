@@ -1,18 +1,8 @@
 package com.lexass.aaaaaaaaaaaaa;
 
-import android.app.Person;
-
-import org.jetbrains.annotations.NotNull;
-
 import androidx.room.ColumnInfo;
-import androidx.room.Dao;
-import androidx.room.Delete;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
-
-
-import java.time.LocalDateTime;
-import java.util.List;
 
 @Entity
 public class Beauty {
@@ -28,14 +18,18 @@ public class Beauty {
     @ColumnInfo(name = "client")
     public String client;
 
-
-
-    public Beauty(String name, String beauty_name, String client){
+    public Beauty(long iud, String name, String beauty_name, String client){
+        this.uid = uid;
         this.beauty_name = beauty_name;
         this.name = name;
         this.client = client;
 
     }
+
+    public int getUid() {return uid;}
+
+    public void setUid(int uid) {this.uid = uid;}
+
     public String getBeauty_name() {
         return beauty_name;
     }

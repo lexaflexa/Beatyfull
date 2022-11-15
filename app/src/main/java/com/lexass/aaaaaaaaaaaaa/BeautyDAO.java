@@ -11,14 +11,6 @@ import java.util.List;
 
 @Dao
 public interface BeautyDAO {
-    // @Insert
-    //  void addPizza(PizzaDTO pizza);
-
-    //  @Delete
-    // void deletePizza(PizzaDTO pizza);
-
-    //@Query("SELECT * FROM pizza")
-    // LiveData<List<PizzaDTO>> getAllPizzas();
 
     @Insert
     void AddBeauty(Beauty beauty);
